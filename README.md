@@ -63,7 +63,7 @@ To run the project locally, follow these steps:
 │ ├── assets # Static assets such as images 
 │ ├── components # Reusable components (cards, buttons, etc.) 
 │ ├── constants # Constants used throughout the app 
-│ ├── customHooks # Custom hooks including useDebounce 
+│ ├── customHooks # Custom hooks like useDebounce, useOutsideClick
 │ ├── routes # Page-level components (Home, Rockets, Launches, History) 
 │ ├── types # TypeScript type definitions 
 │ ├── App.tsx # Main application component 
@@ -79,7 +79,8 @@ To run the project locally, follow these steps:
 
 ## Custom Hooks
 
-- **useDebounce**: This custom hook is used to limit the number of API calls made when the user types in the filter input field on the Launches page. By debouncing the input, API calls are delayed until the user stops typing, improving performance and reducing the number of requests made to the SpaceX API.
+- **useDebounce**: This hook is used to limit the number of API calls made when the user types in the filter input field on the Launches page. By debouncing the input, API calls are delayed until the user stops typing, improving performance and reducing the number of requests made to the SpaceX API.
+- **useOutsideClick**: This hook detects clicks outside a referenced element and triggers a callback function. It uses useRef to track the element and adds a mousedown event listener via useEffect. When a click occurs outside the element, the callback is invoked. This is ideal for closing dropdowns, modals, or similar components.
 
 ## Usage
 - **Home Page**: Provides the latest news and upcoming launch details from SpaceX.
@@ -92,9 +93,6 @@ To run the project locally, follow these steps:
 ## Future Enhancements
 - **Additional Filters**: Adding more filtering options, such as by launch date, success rate, or rocket type.
 - **Animations**: Introducing animations for better user engagement.
-- **Testing**: Implementing unit and integration tests to improve code reliability and catch edge cases.
 - **Caching**: Optimizing API responses with caching for frequently accessed data.
 
 ---
-
-This README includes all necessary information for setting up, running, and contributing to the project. Feel free to modify the repository URL and any other details as needed!
