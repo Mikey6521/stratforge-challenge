@@ -57,7 +57,22 @@ To run the project locally, follow these steps:
 
 ## Project Structure
 
-├── src │ ├── api # API handling for fetching data from SpaceX API │ ├── assets # Static assets such as images │ ├── components # Reusable components (cards, buttons, etc.) │ ├── constants # Constants used throughout the app │ ├── customHooks # Custom hooks including useDebounce │ ├── routes # Page-level components (Home, Rockets, Launches, History) │ ├── types # TypeScript type definitions │ ├── App.tsx # Main application component │ ├── index.tsx # Entry point of the app │ ├── App.css # Global CSS │ └── index.css # Tailwind and global styling ├── tailwind.config.js # Tailwind CSS configuration ├── tsconfig.json # TypeScript configuration ├── README.md # Project README file └── package.json # Project dependencies and scripts
+├── src 
+│ ├── api # API handling for fetching data from SpaceX API 
+│ ├── assets # Static assets such as images 
+│ ├── components # Reusable components (cards, buttons, etc.) 
+│ ├── constants # Constants used throughout the app 
+│ ├── customHooks # Custom hooks including useDebounce 
+│ ├── routes # Page-level components (Home, Rockets, Launches, History) 
+│ ├── types # TypeScript type definitions 
+│ ├── App.tsx # Main application component 
+│ ├── index.tsx # Entry point of the app 
+│ ├── App.css # Global CSS 
+│ └── index.css # Tailwind and global styling 
+├── tailwind.config.js # Tailwind CSS configuration 
+├── tsconfig.json # TypeScript configuration 
+├── README.md # Project README file 
+└── package.json # Project dependencies and scripts
 
 
 ## Custom Hooks
