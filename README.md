@@ -39,7 +39,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo-link
+    git clone https://github.com/Mikey6521/stratforge-challenge
     ```
 2. Navigate to the project directory:
     ```bash
