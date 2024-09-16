@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# StratForge-Challenge: Explore SpaceX Webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive web application for exploring SpaceX rockets, launches, and history. It fetches data from the SpaceX v4 API and displays dynamic information about rockets and launches with detailed views, interactive cards, and more. The project is built using React, TypeScript, and Tailwind CSS, ensuring a responsive and modern user interface.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Custom Hooks](#custom-hooks)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
 
-In the project directory, you can run:
+## Features
+- **Home Page**: 
+  - Contains a hero section with responsive images for different screen sizes.
+  - Provides the latest news and information about upcoming SpaceX launches.
+- **Navigation**: 
+  - **Rockets**: Lists SpaceX rockets with details like name, description, and images. Clicking on a rocket takes you to its detailed view.
+  - **Launches**: Displays a paginated list of SpaceX launches with filter functionality. Users can filter launches by name, and the page is paginated for better performance.
+  - **History**: Shows a list of historical events related to SpaceX.
+- **Detailed Pages**: Each rocket or launch has a detailed view with interactive cards displaying relevant information.
+- **Fallbacks**: When images or other data are missing from the API, fallback images are provided for a consistent user experience.
+- **Reusable Components**: The app is designed with reusable components to ensure scalability and maintainability.
+- **Custom Fonts and Styling**: Tailwind CSS has been customized for unique fonts and a responsive design.
 
-### `npm start`
+## Technologies Used
+- **React**: For building the user interface and handling component structures.
+- **TypeScript**: To ensure type safety and code quality.
+- **Tailwind CSS**: For responsive and utility-first styling.
+- **SpaceX API (v4)**: Fetches real-time data on rockets, launches, and history.
+- **React Router**: For client-side routing between pages (Home, Rockets, Launches, History).
+- **React Icons**: Used for adding icons to the UI.
+- **Debouncing**: A custom hook, `useDebounce`, limits API calls when filtering launches by name.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To run the project locally, follow these steps:
 
-### `npm test`
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo-link
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd stratforge-challenge
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+5. Open your browser and navigate to `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+├── src │ ├── api # API handling for fetching data from SpaceX API │ ├── assets # Static assets such as images │ ├── components # Reusable components (cards, buttons, etc.) │ ├── constants # Constants used throughout the app │ ├── customHooks # Custom hooks including useDebounce │ ├── routes # Page-level components (Home, Rockets, Launches, History) │ ├── types # TypeScript type definitions │ ├── App.tsx # Main application component │ ├── index.tsx # Entry point of the app │ ├── App.css # Global CSS │ └── index.css # Tailwind and global styling ├── tailwind.config.js # Tailwind CSS configuration ├── tsconfig.json # TypeScript configuration ├── README.md # Project README file └── package.json # Project dependencies and scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Custom Hooks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **useDebounce**: This custom hook is used to limit the number of API calls made when the user types in the filter input field on the Launches page. By debouncing the input, API calls are delayed until the user stops typing, improving performance and reducing the number of requests made to the SpaceX API.
 
-### `npm run eject`
+## Usage
+- **Home Page**: Provides the latest news and upcoming launch details from SpaceX.
+- **Rockets Page**: Lists all SpaceX rockets with detailed views available on click.
+- **Launches Page**: 
+  - Allows users to filter launches by name and view paginated results.
+  - Click on a launch to get more detailed information.
+- **History Page**: Shows important historical events related to SpaceX.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Future Enhancements
+- **Additional Filters**: Adding more filtering options, such as by launch date, success rate, or rocket type.
+- **Animations**: Introducing animations for better user engagement.
+- **Testing**: Implementing unit and integration tests to improve code reliability and catch edge cases.
+- **Caching**: Optimizing API responses with caching for frequently accessed data.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This README includes all necessary information for setting up, running, and contributing to the project. Feel free to modify the repository URL and any other details as needed!
