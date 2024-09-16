@@ -39,7 +39,9 @@ const NavBar: React.FC = () => {
         </button>
       </div>
 
-      <div ref={menuRef} className={`fixed top-0 right-0 h-full w-52 bg-gray-800 transition-transform transform  ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-auto z-40`}>
+      <div ref={menuRef} className={`fixed top-0 right-0 h-full w-52 bg-gray-800 transition-transform transform  
+        ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-auto z-40`}
+      >
         <div className="flex justify-center items-center relative px-6 py-4 border-b border-neutral-200">
           <h2 className="text-white text-3xl">Menu</h2>
           <button className="absolute right-2 text-white text-2xl" onClick={toggleMenu}>

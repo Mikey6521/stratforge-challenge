@@ -1,1 +1,1 @@
-export const apiKey="for spacex we don't need key as of now";
+export const apiKey="for spaceX we don't need key as of now";

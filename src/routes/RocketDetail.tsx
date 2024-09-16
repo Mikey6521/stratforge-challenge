@@ -52,15 +52,12 @@ const RocketDetail: React.FC = () => {
         </div>
 
         
-
-        {/* Rocket Description */}
         {rocket?.description && (
           <p className="text-gray-300 mt-4 text-justify leading-6 tracking-wide">
             {rocket.description}
           </p>
         )}
 
-        {/* Rocket Wikipedia Link */}
         {rocket?.wikipedia && (
           <div className="mt-8 flex justify-center">
             <a
