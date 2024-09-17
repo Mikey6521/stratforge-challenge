@@ -8,6 +8,4 @@ html, body {
 }
 
 
-.nav-link {
-  @apply text-white hover:text-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50 px-2 py-1 rounded;
-}
+

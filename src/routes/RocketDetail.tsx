@@ -19,7 +19,7 @@ const RocketDetail: React.FC = () => {
   if (!rocket) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-500"></div>
       </div>
     );
   }
@@ -27,17 +27,19 @@ const RocketDetail: React.FC = () => {
   return (
     <div className="container mx-auto p-8">
       <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg flex flex-col">
-        <h1 className="text-4xl font-extrabold mb-6 text-center tracking-wider">{rocket.name ?? 'N/A'}</h1>
+        <h1 className="text-4xl font-extrabold mb-6 text-center tracking-wider text-yellow-400">
+          {rocket.name ?? 'N/A'}
+        </h1>
 
         <div className="flex justify-between items-center text-gray-400 text-lg mb-6">
           <p>
-            Height: <span className="font-semibold">{rocket.height.meters ?? 'N/A'} mtr</span>
+            Height: <span className="font-semibold text-indigo-500">{rocket.height.meters ?? 'N/A'}mtr</span>
           </p>
           <p>
-            Diameter: <span className="font-semibold">{rocket.diameter.meters ?? 'N/A'} mtr</span>
+            Diameter: <span className="font-semibold text-indigo-500">{rocket.diameter.meters ?? 'N/A'}mtr</span>
           </p>
           <p>
-            Mass: <span className="font-semibold">{rocket.mass.kg ?? 'N/A'} kg</span>
+            Mass: <span className="font-semibold text-indigo-500">{rocket.mass.kg ?? 'N/A'}kg</span>
           </p>
         </div>
 
@@ -51,7 +53,6 @@ const RocketDetail: React.FC = () => {
           />
         </div>
 
-        
         {rocket?.description && (
           <p className="text-gray-300 mt-4 text-justify leading-6 tracking-wide">
             {rocket.description}
@@ -64,7 +65,7 @@ const RocketDetail: React.FC = () => {
               href={rocket.wikipedia}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             >
               🌍 Learn More on Wikipedia
             </a>

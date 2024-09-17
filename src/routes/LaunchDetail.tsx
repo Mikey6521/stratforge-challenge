@@ -19,7 +19,7 @@ const LaunchDetail: React.FC = () => {
   if (!launch) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-500"></div>
       </div>
     );
   }
@@ -27,15 +27,23 @@ const LaunchDetail: React.FC = () => {
   return (
     <div className="container mx-auto p-8">
       <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg">
-
-        <h1 className="text-4xl font-extrabold mb-6 text-center tracking-wider">{launch.name ?? 'N/A'}</h1>
+        
+        <h1 className="text-4xl font-extrabold mb-6 text-center tracking-wider text-yellow-400">
+          {launch.name ?? 'N/A'}
+        </h1>
 
         <div className="flex justify-between items-center">
-          <p className="text-gray-400">Flight Number: <span className="font-semibold">{launch.flight_number ?? 'N/A'}</span></p>
-          <p className="text-gray-400">
-            Launch Date: <span className="font-semibold">{launch.date_utc ? new Date(launch.date_utc).toLocaleString() : 'N/A'}</span>
+          <p className="text-gray-400">Flight No:{" "}  
+            <span className="font-semibold text-indigo-500">{launch.flight_number ?? 'N/A'}</span>
           </p>
-          <p className="text-gray-400">Success: <span className="font-semibold">{launch.success ? 'Yes' : 'No'}</span></p>
+          <p className="text-gray-400">Launch Date:{" "}
+            <span className="font-semibold text-indigo-500">{launch.date_utc ? new Date(launch.date_utc).toLocaleString() : 'N/A'}</span>
+          </p>
+          <p className="text-gray-400">Success:{" "}
+            <span className={`font-semibold ${launch.success ? 'text-green-500' : 'text-red-500'}`}>
+              {launch.success ? 'Yes' : 'No'}
+            </span>
+          </p>
         </div>
 
         <div className="mt-6 flex justify-center">
@@ -52,7 +60,7 @@ const LaunchDetail: React.FC = () => {
               href={launch.links.webcast}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
             >
               🚀 Watch Webcast
             </a>
@@ -66,7 +74,7 @@ const LaunchDetail: React.FC = () => {
         )}
 
         {launch?.failures?.length > 0 && (
-          <div className="text-red-500 mt-6">
+          <div className="text-red-400 mt-6">
             <h3 className="font-bold text-lg underline mb-2">Failures:</h3>
             {launch.failures.map((failure: any, index: number) => (
               <div key={index} className="mt-2">
@@ -79,7 +87,7 @@ const LaunchDetail: React.FC = () => {
 
         {(launch?.links?.article || launch?.links?.wikipedia) && (
           <div className="mt-6">
-            <p className="text-lg text-yellow-500 font-semibold mb-2">Read more:</p>
+            <p className="text-lg text-yellow-400 font-semibold mb-2">Read more:</p>
             <ul className="list-none space-y-2">
               {launch?.links?.article && (
                 <li>
@@ -87,7 +95,7 @@ const LaunchDetail: React.FC = () => {
                     href={launch.links.article}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-yellow-300 transition duration-300"
+                    className="text-indigo-400 hover:text-yellow-300 transition duration-300"
                   >
                     📰 Article
                   </a>
@@ -99,7 +107,7 @@ const LaunchDetail: React.FC = () => {
                     href={launch.links.wikipedia}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-yellow-300 transition duration-300"
+                    className="text-indigo-400 hover:text-yellow-300 transition duration-300"
                   >
                     🌍 Wikipedia
                   </a>

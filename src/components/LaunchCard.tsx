@@ -15,7 +15,9 @@ const LaunchCard: React.FC<LaunchCardProps> = ({ launch }) => {
   };
 
   return (
-    <div className="border rounded shadow-lg p-4 transition-transform transform hover:scale-105 hover:shadow-xl duration-300 cursor-pointer">
+    <div className="border rounded shadow-lg p-4 transition-transform transform hover:scale-105 hover:shadow-xl 
+      duration-300 cursor-pointer"
+    >
       <div 
         onClick={() => {
           const formattedName = launch.name.replace(/\s+/g, '-');

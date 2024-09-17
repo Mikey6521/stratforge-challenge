@@ -59,13 +59,15 @@ const HeroSection: React.FC = () => {
             </p>
             <div className="flex justify-center gap-4">
               <button
-                className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 text-white font-semibold py-3 px-6 rounded-lg transition"
+                className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300
+                 text-white font-semibold py-3 px-6 rounded-lg transition"
                 onClick={() => document.getElementById('launches-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Upcoming Launches
               </button>
               <button
-                className="bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 text-white font-semibold py-3 px-6 rounded-lg transition"
+                className="bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300
+                 text-white font-semibold py-3 px-6 rounded-lg transition"
                 onClick={() => document.getElementById('history-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Latest News
