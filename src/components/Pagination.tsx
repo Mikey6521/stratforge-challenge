@@ -39,13 +39,13 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
-      onPageChange(currentPage + 1);
+      setInputPage(currentPage + 1);
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
-      onPageChange(currentPage - 1);
+      setInputPage(currentPage - 1);
     }
   };
 
